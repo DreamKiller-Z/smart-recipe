@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>hw/sw lab1</title>
+  <!-- animsition.css -->
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- animsition.js -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <!-- firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+  <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- <scri src = "https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></scri> -->
+</head>
+<body>
+  <nav id="slide-menu">
+    <div class="profile">
+      <img src="assets/profile_photo@1x.png" width="50px">
+      <b>Emily</b>
+      <p>ID: Emily99</p>
+      <p>Edit profile</p>
+    </div>
+    <div class="icons">
+      <img src="assets/icon_latest@1x.png" width="40px">
+      <p><b>LASTEST</b></p>
+      <img src="assets/icon_saved@1x.png" width="40px">
+      <p>SAVED</p>
+      <img src="assets/icon_discover@1x.png" width="50px">
+      <p>DISCOVER</p>
+      <img src="assets/icon_tips@1x.png" width="50px">
+      <p>COOKING TIPS</p>
+      <img src="assets/icon_settings@1x.png" width="40px">
+      <p>SETTINGS</p>
+    </div>
+  </nav>
+
+
+    <!-- Content panel -->
+  <div id="content">
+      <!-- <div class="menu-trigger"></div> -->
+      <div
+      class="animsition"
+      data-animsition-in-class="fade-in-up"
+      data-animsition-in-duration="1000"
+      data-animsition-out-class="fade-out-up"
+      data-animsition-out-duration="800">
+      <div class="sub-content">
+        <div class = "img">
+          <img src="/assets/img_1@1x.png" width="100%">
+        </div>
+        <div class = "words">
+          <div class="step" id ="step">
+            <h1 >Step 1 Cut</h1>
+          </div>
+          <div class="ingredients">
+            <b>Ingredients</b>
+          </div>
+          <div class="grid-container" id ="ingredients">
+            <div class="grid-item-left">2</div>
+            <div class="grid-item-right">chicken legs</div>
+            <div class="grid-item-left">10g</div>
+            <div class="grid-item-right">parsley</div>
+            <div class="grid-item-left">1</div>
+            <div class="grid-item-right">onion</div>
+          </div>
+          <div class="description" id = "description">Cut the boneless, skinless chicken leg meat into bite-sized pieces. Wash parsley, dry, and roughly chop. Peel and thinly slice onion.
+          </div>
+        </div>
+        <div class="in-process">
+          <div class="timing-text">You have been cutting for:</div>
+          <div class="timer"></div>
+          <div class="loader" title="7">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+              <rect x="0" y="10" width="4" height="10" fill="white" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+              </rect>
+              <rect x="8" y="10" width="4" height="10" fill="white"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+              </rect>
+              <rect x="16" y="10" width="4" height="10" fill="white"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+              </rect>
+            </svg>
+          </div>
+        </div>
+        <!-- <div class="before-process"> -->
+        <div class="before-process"><font color = "black">About to start</font></div>
+      </div>
+        <!-- <div class="post-process">
+        </div> -->
+    </div>
+      <!-- <button type="button" id="button-start">Start</button> -->
+  </div>
+  <div class="menu-right">
+    <img src="assets/icon_last_page@1x.png">
+    <img src="" alt="">
+  </div>
+
+  <!-- <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+      <p class="text-xl-center">You have been cutting for:</p>
+    </div> -->
+
+<!-- </div> -->
+<script src="js/index.js"></script>
+<script src="js/animsition.min.js"></script>
+</body>
+</html>
